@@ -1,0 +1,45 @@
+<header class="app-topbar sticky-top">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+
+        <button type="button" class="btn btn-ghost btn-icon d-lg-none" data-bs-toggle="offcanvas"
+            data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Open navigation">
+            <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+
+        <div class="me-auto min-w-0">
+            <h1 class="app-title">患者管理</h1>
+            <p class="app-subtitle">Manage patient records, appointments and history</p>
+        </div>
+
+        <form class="app-search" role="search" onsubmit="return false;">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <label class="visually-hidden" for="patientSearch">Search patients</label>
+            <input type="search" id="patientSearch" class="form-control" placeholder="Search" autocomplete="off">
+        </form>
+
+        <button type="button" class="btn btn-primary btn-icon" id="addPatientBtn" aria-label="Add new patient"
+            title="Add new patient">
+            <i class="bi bi-plus-lg" aria-hidden="true"></i>
+        </button>
+
+        <div class="dropdown">
+            <button type="button" class="btn profile-btn dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-label="Account menu">
+                <span class="avatar avatar-lg" aria-hidden="true">ZX</span>
+                <span class="profile-text text-start">
+                    <span class="profile-name d-block">Dr. Zheng Xuan</span>
+                    <span class="profile-role d-block"></span>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Preferences</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-danger" href="#">Sign out</a></li>
+            </ul>
+        </div>
+
+    </div>
+</header>

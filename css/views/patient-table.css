@@ -1,0 +1,235 @@
+/* Card chrome — leans on Bootstrap .card */
+.card {
+    border-color: var(--border);
+}
+
+.card-header,
+.card-footer {
+    border-color: var(--border);
+}
+
+/* Sortable headers */
+.th-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-weight: 500;
+    color: var(--text-2);
+    cursor: pointer;
+    transition: color .15s ease;
+}
+
+.th-sort:hover {
+    color: var(--brand);
+}
+
+.th-sort .bi {
+    font-size: .75rem;
+    opacity: .35;
+    transition: opacity .15s ease, color .15s ease;
+}
+
+.th-sort[data-dir="asc"] .bi,
+.th-sort[data-dir="desc"] .bi {
+    opacity: 1;
+    color: var(--brand);
+}
+
+.th-sort[data-dir="desc"] .bi::before {
+    content: "\F12F";
+}
+
+/* arrow-down */
+
+/* Table base */
+.table thead th {
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--text-2);
+    border-bottom-color: var(--border);
+    padding: .75rem 1.25rem;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    font-size: .875rem;
+    padding: .875rem 1.25rem;
+    border-bottom-color: var(--border);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table tbody tr {
+    cursor: pointer;
+}
+
+.table tbody tr:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: -2px;
+}
+
+/* Patient cell */
+.person {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    min-width: 0;
+}
+
+.person-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.person-name {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.person-id {
+    font-size: .75rem;
+    color: var(--text-3);
+    white-space: nowrap;
+}
+
+/* VIP pill */
+.vip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #FFE766, #FFD700);
+    border: 1px solid rgba(107, 78, 0, .16);
+    color: #6B4E00;
+    font-size: .625rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    line-height: 1.4;
+}
+
+/* Country */
+.country {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    white-space: nowrap;
+}
+
+.flag {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* Row menu */
+.table .dropdown-menu {
+    min-width: 200px;
+    padding: .375rem;
+    border-color: var(--border);
+}
+
+.table .dropdown-item {
+    padding: .5rem .625rem;
+    border-radius: 7px;
+    font-size: .8125rem;
+}
+
+.table .dropdown-item:active {
+    background: var(--brand-soft);
+    color: var(--brand);
+}
+
+/* Skeleton */
+.sk {
+    height: 14px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #EEF1F5 25%, #F7F9FB 37%, #EEF1F5 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.skeleton-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.125rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.skeleton-row:last-child {
+    border-bottom: 0;
+}
+
+.skeleton-row .sk-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+/* Pagination */
+.pagination .page-link {
+    min-width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .625rem;
+    border-radius: 8px;
+    border-color: var(--border);
+    color: var(--text-2);
+    font-size: .8125rem;
+    font-weight: 600;
+}
+
+.pagination .page-link:hover {
+    background: var(--brand-soft);
+    border-color: var(--brand);
+    color: var(--brand);
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+    opacity: .45;
+    background: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .table {
+        min-width: 720px;
+    }
+}
+
+/* Newly added row flash */
+@keyframes newRowFlash {
+  0%   { background-color: rgba(54, 179, 126, .22); }
+  100% { background-color: transparent; }
+}
+.table tbody tr.is-new td { animation: newRowFlash 1.8s ease-out; }

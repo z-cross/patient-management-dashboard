@@ -1,0 +1,177 @@
+.app-sidebar {
+    --bs-offcanvas-width: 264px;
+    --bs-offcanvas-bg: #0052CC;
+    --bs-offcanvas-padding-x: 14px;
+    --bs-offcanvas-padding-y: 20px;
+
+    background-color: var(--brand) !important;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .app-sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        flex: 0 0 var(--sidebar-w);
+        width: var(--sidebar-w);
+    }
+
+    .app-sidebar .offcanvas-body {
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 20px 14px;
+        overflow-y: auto;
+    }
+}
+
+.pro-card {
+    margin-top: auto;
+    padding: 16px;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text);
+    box-shadow: 0 8px 24px rgba(9, 30, 66, .12);
+    flex-shrink: 0;
+    /* never squash it when the nav is long */
+}
+
+.pro-card h2 {
+    font-size: .875rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.pro-card p {
+    font-size: .75rem;
+    line-height: 1.5;
+    color: var(--text-2);
+    margin: 0 0 12px;
+}
+
+.app-sidebar .offcanvas-header {
+    padding: 12px 14px 0;
+    justify-content: flex-end;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 8px 18px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.brand:hover {
+    color: #fff;
+}
+
+.brand-mark {
+    width: 36px;
+    height: 36px;
+    flex: none;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--brand);
+    font-size: 1.15rem;
+}
+
+.brand-text {
+    line-height: 1.2;
+}
+
+.brand-text strong {
+    display: block;
+    font-size: .9375rem;
+    font-weight: 700;
+}
+
+.brand-text small {
+    font-size: .6875rem;
+    color: rgba(255, 255, 255, .65);
+}
+
+/* Nav */
+.side-nav {
+    gap: 2px;
+}
+
+.side-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 9px;
+    color: rgba(255, 255, 255, .85);
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.side-nav .nav-link .bi {
+    width: 20px;
+    font-size: 1.0625rem;
+    text-align: center;
+    flex: none;
+}
+
+.side-nav .nav-link:hover {
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+}
+
+.side-nav .nav-link:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 1px;
+}
+
+.side-nav .nav-link.active {
+    background: #fff;
+    color: var(--brand);
+    box-shadow: 0 1px 2px rgba(9, 30, 66, .08);
+}
+
+.side-nav .badge {
+    margin-left: auto;
+    min-width: 20px;
+    padding: .25em .45em;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .22);
+    color: #fff;
+    font-size: .6875rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.side-nav .nav-link.active .badge {
+    background: var(--brand-soft);
+    color: var(--brand);
+}
+
+/* Pro card */
+.pro-card {
+    margin-top: auto;
+    padding: 16px;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text);
+    box-shadow: 0 8px 24px rgba(9, 30, 66, .12);
+}
+
+.pro-card h2 {
+    font-size: .875rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.pro-card p {
+    font-size: .75rem;
+    line-height: 1.5;
+    color: var(--text-2);
+    margin: 0 0 12px;
+}

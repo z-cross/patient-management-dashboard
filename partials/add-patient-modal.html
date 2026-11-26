@@ -1,0 +1,89 @@
+<div class="modal fade" id="addPatientModal" tabindex="-1" aria-labelledby="addPatientModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <form id="addPatientForm" novalidate>
+                <div class="modal-header">
+                    <h2 class="modal-title h5 mb-0" id="addPatientModalLabel">Add new patient</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apName">Full name <span class="text-danger">*</span></label>
+                            <input class="form-control" id="apName" name="name" required autocomplete="off">
+                            <div class="invalid-feedback">Please enter the patient's name.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apPhone">Phone <span class="text-danger">*</span></label>
+                            <input class="form-control" id="apPhone" name="phone" type="tel" required
+                                placeholder="+60 12-345 6789" autocomplete="off">
+                            <div class="invalid-feedback">Please enter a phone number.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apEmail">Email</label>
+                            <input class="form-control" id="apEmail" name="email" type="email"
+                                placeholder="name@mail.com" autocomplete="off">
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apCountry">Nationality</label>
+                            <select class="form-select" id="apCountry" name="country">
+                                <option value="Malaysia">🇲🇾 Malaysia</option>
+                                <option value="Singapore">🇸🇬 Singapore</option>
+                                <option value="Indonesia">🇮🇩 Indonesia</option>
+                                <option value="Vietnam">🇻🇳 Vietnam</option>
+                                <option value="India">🇮🇳 India</option>
+                                <option value="China">🇨🇳 China</option>
+                                <option value="Japan">🇯🇵 Japan</option>
+                                <option value="Ireland">🇮🇪 Ireland</option>
+                                <option value="United Kingdom">🇬🇧 United Kingdom</option>
+                                <option value="United Arab Emirates">🇦🇪 United Arab Emirates</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apOccupation">Occupation</label>
+                            <input class="form-control" id="apOccupation" name="occupation" autocomplete="off">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apBirthday">Birthday</label>
+                            <input class="form-control" id="apBirthday" name="birthday" type="date">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="apNric">NRIC / Passport</label>
+                            <input class="form-control" id="apNric" name="nric" autocomplete="off">
+                        </div>
+
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="apVip" name="vip">
+                                <label class="form-check-label" for="apVip">Mark as VIP</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="apRemarks">Medical remarks</label>
+                            <textarea class="form-control" id="apRemarks" name="remarks" rows="2"
+                                placeholder="Allergies, chronic conditions, etc."></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Add patient
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

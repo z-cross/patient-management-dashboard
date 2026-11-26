@@ -1,0 +1,53 @@
+body {
+    font-family: var(--bs-font-sans-serif);
+    color: var(--text);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+}
+
+/* Bootstrap primary override */
+.btn-primary {
+    --bs-btn-bg: #0052CC;
+    --bs-btn-border-color: #0052CC;
+    --bs-btn-hover-bg: #0747A6;
+    --bs-btn-hover-border-color: #0747A6;
+    --bs-btn-active-bg: #0747A6;
+    --bs-btn-active-border-color: #0747A6;
+    --bs-btn-disabled-bg: #0052CC;
+    --bs-btn-disabled-border-color: #0052CC;
+    --bs-btn-focus-shadow-rgb: 0, 82, 204;
+}
+
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    z-index: 2000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: top .15s ease;
+}
+
+.skip-link:focus {
+    top: 12px;
+    color: #fff;
+}
+
+.app-shell {
+    min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: .001ms !important;
+    }
+}
